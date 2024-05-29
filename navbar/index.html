@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body{
+    background-color: rgb(29, 1, 55);
+    color: white;
+}
+nav {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 10px;
+    text-align: center;
+
+}
+nav a{
+    text-decoration: none;
+    color: white;
+}
+ul{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+nav a::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width .3s;
+}
+nav a:hover::after{
+    width: 100%;
+}
+.box{
+    height: 700px;
+}
+#Home{
+    background-color: rgba(250, 0, 0 , 0.5);
+}
+#About{
+    background-color: green;
+}
+#Contact{
+    background-color: blue;
+}
+#Services{
+    background-color: yellow;
+}
+html{
+    scroll-behavior: smooth;
+}
+.box{
+    scroll-behavior: smooth;
+}
+nav{
+    overflow: hidden;
+    position: sticky;
+    width: 100%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <a href="#Home"><li>Home</li></a>
+            <a href="#About"><li>About</li></a>
+            <a href="#Contact"><li>Contact</li></a>
+            <a href="#Services"><li>Services</li></a>
+            </ul>
+            </nav>
+            <div id="element"></div>
+  
+ <div id="Home" class="box">Home</div>
+    <div id="About" class="box">About</div>
+    <div id="Contact" class="box">Contact</div>
+    <div id="Services" class="box">Services</div>
+    
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+          strings: ['Kuch dikh raha hai', 'Ya fir nahi dik raha'],
+          typeSpeed: 50,
+        });
+      </script>
+</body>
+</html>
